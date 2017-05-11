@@ -24,9 +24,11 @@ sum''::[Int]->Int
 sum'' xs = sum' xs 0
 
 main = do
-	print list1
-	print list2
-	print list3
-	print $ list1 >>= double
-	print $ sum'' list2
-	print $ map increment list2
+	print list1              	--[1]
+	print list2              	--[1,2,3]
+	print list3              	--[1,2,3,4,5,6,7,8,9,10]
+	print $ list1 >>= double 	--[1,1]
+	print $ list2 >>= double 	--[1,1,2,2,3,3]
+	print $ under5 list3     	--[1,2,3,4]
+	print $ sum'' list2      	--6
+	print $ map increment list2 --[2,3,4]
